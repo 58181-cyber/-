@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio 2568</title>
+<title>Portfolio - นายธนดล รอดแช่ม</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -12,8 +12,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Kanit', sans-serif;
-    transition:0.3s;
+    font-family:'Kanit',sans-serif;
 }
 
 body{
@@ -23,32 +22,9 @@ body{
 /* Dark Mode */
 body.dark{
     background:linear-gradient(135deg,#1e1e1e,#111);
-}
-
-body.dark .container{
-    background:#1f1f1f;
     color:white;
 }
 
-body.dark .info-box{
-    background:#2a2a2a;
-    color:white;
-}
-
-body.dark header{
-    background:#1f1f1f;
-}
-
-body.dark .footer{
-    color:#aaa;
-}
-
-body.dark .visitor-box{
-    background:#2a2a2a;
-    color:white;
-}
-
-/* Header */
 header{
     display:flex;
     align-items:center;
@@ -56,8 +32,12 @@ header{
     gap:15px;
     padding:20px;
     background:white;
-    box-shadow:0 3px 15px rgba(0,0,0,0.1);
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
     position:relative;
+}
+
+body.dark header{
+    background:#1f1f1f;
 }
 
 header img{
@@ -68,8 +48,7 @@ header h2{
     color:#ff3c00;
 }
 
-/* Dark Button */
-.dark-toggle{
+.dark-btn{
     position:absolute;
     right:20px;
     top:20px;
@@ -81,34 +60,55 @@ header h2{
     cursor:pointer;
 }
 
-/* Container */
 .container{
-    max-width:900px;
+    max-width:1000px;
     margin:40px auto;
     background:white;
     padding:40px;
     border-radius:25px;
-    box-shadow:0 20px 50px rgba(0,0,0,0.25);
+    box-shadow:0 25px 60px rgba(0,0,0,0.25);
 }
 
-/* Profile */
-.profile{
+body.dark .container{
+    background:#1f1f1f;
+}
+
+.hero{
     text-align:center;
+    margin-bottom:40px;
 }
 
-.profile img{
+.hero img{
     width:220px;
     border-radius:50%;
     box-shadow:0 15px 40px rgba(0,0,0,0.3);
     margin-bottom:20px;
 }
 
-.profile h1{
+.hero h1{
+    font-size:34px;
     color:#ff3c00;
-    font-size:32px;
 }
 
-/* Section */
+.hero .university{
+    font-size:26px;
+    font-weight:700;
+    background: linear-gradient(90deg,#d4af37,#f5d76e,#c9a227);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.hero .faculty{
+    font-size:18px;
+    font-weight:400;
+    opacity:0.9;
+}
+
+.hero h3{
+    font-weight:400;
+}
+
 .section{
     margin-top:40px;
 }
@@ -120,15 +120,17 @@ header h2{
     margin-bottom:20px;
 }
 
-/* Info Box */
-.info-box{
+.box{
     background:#f5f5f5;
     padding:15px 20px;
     border-radius:15px;
     margin-bottom:15px;
 }
 
-/* Timeline */
+body.dark .box{
+    background:#2a2a2a;
+}
+
 .timeline{
     border-left:4px solid #ff6a00;
     padding-left:20px;
@@ -142,106 +144,149 @@ header h2{
     color:#ff3c00;
 }
 
-/* Footer */
+.activity-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.activity-card{
+    background:#f5f5f5;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+body.dark .activity-card{
+    background:#2a2a2a;
+}
+
+.activity-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.activity-card div{
+    padding:15px;
+}
+
+.contact a{
+    text-decoration:none;
+    color:inherit;
+    font-weight:600;
+}
+
 .footer{
     text-align:center;
     margin-top:40px;
     padding-top:20px;
     border-top:1px solid #ddd;
     font-size:14px;
-    color:#777;
 }
 
-/* Visitor Box (ล่างสุด) */
-.visitor-box{
-    text-align:center;
-    margin-top:20px;
-    padding:15px;
-    background:#f5f5f5;
-    border-radius:15px;
-    font-size:14px;
+@media(max-width:768px){
+    .container{
+        padding:20px;
+    }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-    <img src="NULOGO-Download.png">
-    <h2>Portfolio นักเรียน</h2>
-    <button class="dark-toggle" onclick="toggleDark()">🌙</button>
+    <img src="Portfolio.png">
+    <h2>Portfolio</h2>
+    <button class="dark-btn" onclick="toggleDark()">🌙</button>
 </header>
 
 <div class="container">
 
-    <div class="profile">
-        <img src="profile.png">
-        <h1>พัชรวัฒน์ กันตุง</h1>
-    </div>
+   <section class="hero">
+    <img src="profile.jpg">
+    <h1>นายธนดล รอดแช่ม</h1>
+    <h2 class="university">มหาวิทยาลัยนเรศวร</h2>
+    <h3 class="faculty">คณะนิติศาสตร์ สาขานิติศาสตร์</h3>
+</section>
 
-    <!-- ข้อมูลส่วนตัว -->
-    <div class="section">
-        <h2>ข้อมูลส่วนตัว</h2>
+    <section class="section">
+        <h2>ประวัติส่วนตัว</h2>
+        <div class="box">ชื่อเล่น : ดล</div>
+        <div class="box">วันเดือนปีเกิด : 12 พฤศจิกายน 2550</div>
+        <div class="box">อายุ : 18 ปี</div>
+        <div class="box">สัญชาติ/เชื้อชาติ : ไทย</div>
+        <div class="box">บิดา : นายวิสูตร รอดแช่ม</div>
+        <div class="box">มารดา : นางรัตนาพร รอดแช่ม</div>
+    </section>
 
-        <div class="info-box">ระดับชั้นมัธยมศึกษาปีที่ 6 ห้อง 8</div>
-        <div class="info-box">GPAX 3.27</div>
-        <div class="info-box">คะแนน TGAT 52.412</div>
-        <div class="info-box">TGAT1 35.000</div>
-        <div class="info-box">TGAT2 45.569</div>
-        <div class="info-box">TGAT3 76.666</div>
-        <div class="info-box">คะแนน TPAT3 39.666</div>
-    </div>
-
-    <!-- ประวัติการศึกษา -->
-    <div class="section">
+    <section class="section">
         <h2>ประวัติการศึกษา</h2>
-
         <div class="timeline">
-            <div class="timeline-item">
-                <h4>มัธยมศึกษาตอนปลาย</h4>
-                <p>โรงเรียนหล่มสักวิทยาคม (ม.4 - ม.6)</p>
-            </div>
-
-            <div class="timeline-item">
-                <h4>มัธยมศึกษาตอนต้น</h4>
-                <p>โรงเรียนหล่มสักวิทยาคม (ม.1 - ม.3)</p>
-            </div>
-
             <div class="timeline-item">
                 <h4>ประถมศึกษา</h4>
-                <p>โรงเรียนตัวอย่าง</p>
+                <p>โรงเรียนอนุบาลทิพยาหล่มสัก</p>
+            </div>
+            <div class="timeline-item">
+                <h4>มัธยมศึกษาตอนต้น</h4>
+                <p>โรงเรียนหล่มสักวิทยาคม</p>
+            </div>
+            <div class="timeline-item">
+                <h4>มัธยมศึกษาตอนปลาย</h4>
+                <p>โรงเรียนหล่มสักวิทยาคม</p>
             </div>
         </div>
+    </section>
+
+    <section class="section">
+        <h2>กิจกรรม</h2>
+        <div class="activity-grid">
+
+            <div class="activity-card">
+    <img src="กิจกรรม1.jpeg" alt="กิจกรรมการทดลองชีววิทยา">
+    <div>
+        <h4>กิจกรรมการทดลองภายในห้องเรียน</h4>
+        <p>
+            กิจกรรมการทดลองภายในห้องเรียนในวิชาชีววิทยา 
+            การทดลองผ่าตัดหัวใจหมู
+        </p>
     </div>
+</div>
 
-    <!-- ประวัติการทำงาน -->
-    <div class="section">
-        <h2>ประวัติการทำงาน</h2>
+<div class="activity-card">
+    <img src="กิจกรรม2.jpeg" alt="กิจกรรมทดลองเคมี">
+    <div>
+        <h4>กิจกรรมการทดลองภายในห้องเรียน</h4>
+        <p>
+            กิจกรรมการทดลองภายในห้องเรียนในวิชาเคมี 
+            การทดลองไตรเตรท
+        </p>
+    </div>
+</div>
 
-        <div class="timeline">
-            <div class="timeline-item">
-                <h4>สโมสรฟุตบอลพรีเมียร์ลีก</h4>
-                <p>ผู้ช่วยโค้ชการฝึกซ้อมด้านกีฬา</p>
-            </div>
+<div class="activity-card">
+    <img src="กิจกรรม3.jpeg" alt="กิจกรรมเรียนรู้นอกห้องเรียน">
+    <div>
+        <h4>กิจกรรมการเรียนรู้นอกห้องเรียน</h4>
+        <p>
+            กิจกรรมการเรียนรู้นอกห้องเรียนที่อุทยานประวัติศาสตร์สุโขทัย
+        </p>
+    </div>
+</div>
 
-            <div class="timeline-item">
-                <h4>หนองยายกึ่มเอฟซี</h4>
-                <p>เฮดโค้ชฟุตบอลประจำสโมสร</p>
-            </div>
 
-            <div class="timeline-item">
-                <h4>สถาบันวิทยาศาสตร์การกีฬา</h4>
-                <p>นักพัฒนาศักยภาพทางกีฬา</p>
-            </div>
         </div>
-    </div>
+    </section>
+
+    <section class="section contact">
+        <h2>ช่องทางการติดต่อ</h2>
+        <div class="box">IG : Tnd_07</div>
+        <div class="box">Facebook : Thanadon Rodcham</div>
+        <div class="box">เบอร์โทร : 0951353893</div>
+        <div class="box">Email : 57939@lomsak.ac.th</div>
+    </section>
 
     <div class="footer">
-        © 2026 By Phatcharawat Kantung | Version 4.3.5.1
-    </div>
-
-    <!-- ผู้เข้าชมเว็บไซต์ (ล่างสุดจริง ๆ) -->
-    <div class="visitor-box">
-        👁 ผู้เข้าชมเว็บไซต์: <span id="visitor-count">กำลังโหลด...</span>
+        © 2026 Power by KantungIT | Vrsion 1.0.0.0
     </div>
 
 </div>
@@ -250,11 +295,7 @@ header h2{
 function toggleDark(){
     document.body.classList.toggle("dark");
 }
-
-/* Visitor Counter */
-fetch("https://api.countapi.xyz/hit/phatcharawat-portfolio/visits")
-.then(res => res.json())
-.then(data => {
-    document.getElementById("visitor-count").innerText = data.value;
-});
 </script>
+
+</body>
+</html>
